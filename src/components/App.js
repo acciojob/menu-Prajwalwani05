@@ -21,19 +21,21 @@ const App = () => {
   };
 
   return (
-    <div className="App">
+    <div className="App" id="main">
       <header>
         <h1>Delicious Dishes</h1>
       </header>
       <nav>
-        <ul>
-          {categories.map((category, index) => (
-            <li key={index}>
-              <button onClick={() => filterItems(category)}>{category}</button>
-            </li>
-          ))}
-        </ul>
-      </nav>
+  <ul>
+    {categories.map((category, index) => (
+      <li key={index}>
+        <button data-testid={`filter-btn-${index + 1}`} onClick={() => filterItems(category)}>
+          {category}
+        </button>
+      </li>
+    ))}
+  </ul>
+</nav>
       <section className="menu">
         {menuItems.map((item) => (
           <div key={item.id} className="menu-item">
