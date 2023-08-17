@@ -1,12 +1,46 @@
 h1 {
-    color: #27aedb;
+    color: black;
     text-align: center;
     }
-    
+nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+nav ul li{
+    list-style: none;
+    margin-right: 10px;
+
+     & a{
+        color: crimson;
+        font-size: 20px;
+        text-decoration: none;
+    }
+}
 
 button{
     color: #27aedb;
     text-align: center;
     justify-content: center;
     align-items: center;
+}
+.menu-item img{
+    max-width:150px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.menu{
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+.menu-item {
+    border: 1px solid ;
+    display: grid;
+    place-items: center;
+    padding: 20px 10px;
+    background-color: wheat;
+    border-radius: 10px;
 }
